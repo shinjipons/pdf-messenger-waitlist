@@ -1,39 +1,55 @@
 import { Button } from "@/components/ui/button";
+import LandingPageCard from "@/components/ui/landing-page-card";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-8 flex flex-col items-center justify-center gap-10 bg-gradient-to-b from-white to-orange-200">
-      <div className="w-10/12 fixed top-2 m-8 justify-between items-center flex flex-row bg-black rounded-full p-1">
-        <p className="text-white text-base pl-4 font-medium">PDFMessenger</p>
-        <Button className="w-min rounded-full text-sm text-neutral-950 px-6 bg-slate-50 hover:bg-purple-600 hover:text-white">
-          Inscription
-        </Button>
-      </div>
-      <div className="flex flex-col gap-4 w-full p-10 items-center text-center">
-        <h2 className="uppercase text-orange-500 font-bold">
-          Liste d'attente ouverte
-        </h2>
-        <h1 className="text-3xl font-semibold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-950 to-neutral-500 leading-tight">
+    <div className="min-h-screen p-8 flex flex-col items-center justify-center gap-10 bg-neutral-900">
+      <section className="flex flex-col gap-4 w-full items-center text-center py-40">
+        <h1 className="text-3xl font-semibold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-400 to-neutral-600 leading-tight">
           Communiquez avec tous vos documents et fichiers de maniére fluide et
           naturelle
         </h1>
-        <p className="w-full font-medium text-neutral-700">
+        <p className="w-full font-medium text-neutral-400">
           Découvrez une nouvelle façon de discuter avec vos fichiers,
           d'apprendre de nouvelles choses grâce à l'intelligence artificielle.
         </p>
-        <Button className="w-min rounded-full text-sm px-6">
+        <Button className="w-min text-sm px-6 bg-indigo-600">
           Je m'inscris!
         </Button>
-      </div>
+      </section>
 
-      <Image
-        src="/app-frame.png"
-        width={1024}
-        height={30}
-        alt="placeholder"
-        className="fixed bottom-0 max-h-48 w-10/12 object-cover object-top outline outline-8 outline-white/40 rounded-t-2xl"
-      />
+      <section>
+        <h1 className="text-3xl font-semibold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-400 to-neutral-600 leading-tight text-center">
+          Pourquoi choisir PDF Messenger?
+        </h1>
+        <div className="grid gap-4 py-8">
+          <LandingPageCard
+            title="Un outil d’étude adapté à tous vos besoins"
+            content="Que ce soit pour vos études ou pour votre travail, PDF Messenger est sans égal."
+          ></LandingPageCard>
+          <LandingPageCard
+            title="Changez de contexte instantanément"
+            content="Changez les documents que vous souhaitez inclure dans la discussion en quelques clics."
+          ></LandingPageCard>
+          <LandingPageCard
+            title="Des dizaines de raccourcis inclus"
+            content="Utiliser toute la puissance de l’intelligence artificielle sans taper vos messages manuellement"
+          ></LandingPageCard>
+          <LandingPageCard
+            title="Mieux apprendre et comprendre rapidement"
+            content="Ne gaspillez plus votre temps à lire des dizaines voire des centaines de pages, PDF Messenger le fait pour vous."
+          ></LandingPageCard>
+          <LandingPageCard
+            title="Un second cerveau surpuissant grâce à l'IA."
+            content="Amplifiez votre productivité avec une assistance intelligente qui organise et enrichit vos idées."
+          ></LandingPageCard>
+        </div>
+      </section>
+
+      <section className="flex flex-col text-center">
+        <p className="text-white">2024 - PDF Messenger</p>
+      </section>
     </div>
   );
 }
