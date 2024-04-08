@@ -21,7 +21,7 @@ export default function Home() {
           Découvrez une nouvelle façon de discuter avec vos fichiers,
           d'apprendre de nouvelles choses grâce à l'intelligence artificielle.
         </p>
-        <Button className="w-min text-base px-6 bg-indigo-600">
+        <Button className="w-min text-base px-6 bg-indigo-600 hover:bg-indigo-500">
           Je m'inscris
         </Button>
         <Image
